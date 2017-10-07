@@ -1,0 +1,22 @@
+# systemd unit for sending an email at boot time
+# (c) 2016 Derrik Walker v2.0
+#
+# This is licensed for use under the GNU General Pulbic License v2
+# 
+# 2016-09-24	DW2	Initial Version
+# 
+
+[Unit]
+ Description=To Send Bootup Email Alert ...
+ ConditionPathExists=/usr/local/bin/boot-email.sh
+
+[Service]
+ Type=forking
+ ExecStart=/usr/local/bin/boot-email.sh start
+ TimeoutSec=0
+ StandardOutput=null
+ RemainAfterExit=yes
+#  SysVStartPriority=99
+
+[Install]
+ WantedBy=multi-user.target

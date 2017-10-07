@@ -1,0 +1,21 @@
+# systemd unit for setting elevators for SSDs at boot time 
+# (c) 2017 Derrik Walker v2.0
+#
+# This is licensed for use under the GNU General Pulbic License v2
+#
+# 2017-09-29	dw2	Initial Version
+#
+[Unit]
+ Description=To set the SSDs Elevators  ...
+ ConditionPathExists=/usr/local/bin/elevators.sh
+
+[Service]
+ Type=forking
+ ExecStart=/usr/local/bin/elevators.sh start
+ TimeoutSec=0
+ StandardOutput=null
+ RemainAfterExit=yes
+#  SysVStartPriority=99
+
+[Install]
+ WantedBy=multi-user.target
