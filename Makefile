@@ -7,6 +7,7 @@
 #
 # 2016-09-24	dwalker		Initial version
 # 2017-10-06	dwalker 	Added installs for trimit and elevators	
+# 2019-01-05	dwalker		Added installes for kill-c6-states.service
 #
 
 BIN=/usr/local/bin
@@ -21,6 +22,7 @@ install:
 	# Systemd units
 	install boot-email.service ${SYSTEMD}
 	install elevators.service ${SYSTEMD}
+	install kill-c6-states.service ${SYSTEMD}
 
 	#cront jobs
 	install trimit.sh ${CRON_WEEKLY}

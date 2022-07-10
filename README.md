@@ -4,7 +4,7 @@ Here you find scripts, systemd units, and other things that I've created for my 
 
 Blog posts that reference things here:
 
-https://www.doomd.net/2017/10/lvm-and-you-zero-data-loss-lvm-caching-and-properly-configure-your-linux-box-to-get-the-most-out-of-ssd.html
+https://www.doomd.net/lvm-and-you-zero-data-loss-lvm-caching-and-properly-configure-your-linux-box-to-get-the-most-out-of-ssd.html
 
 ## Installing whats here:
 
